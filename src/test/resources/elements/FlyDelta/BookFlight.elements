@@ -1,0 +1,51 @@
+{
+"elements":[
+{
+"elementName":"oneWay",
+"identifier":"id",
+"value":"oneway_tab",
+"waitFor":"presence"
+},
+{
+"elementName":"from",
+"identifier":"xpath",
+"value":"//android.widget.EditText[@text='From']",
+"waitFor":"presence"
+},{
+  "elementName":"to",
+  "identifier":"xpath",
+"value":"//android.widget.EditText[@text='To']",
+  "waitFor":"presence"
+  },{
+     "elementName":"date",
+     "identifier":"id",
+     "value":"outbound_date_input_0",
+     "waitFor":"presence"
+     }
+     ,{
+          "elementName":"enterCity",
+          "identifier":"className",
+          "value":"android.widget.EditText",
+          "waitFor":"presence"
+  },
+
+    {
+      "elementName":"selectDate",
+      "identifier":"linkText",
+      "value":"31",
+      "waitFor":"presence"
+    },
+         {
+           "elementName":"applyDate",
+           "identifier":"id",
+           "value":"com.delta.mobile.android:id/apply_button",
+           "waitFor":"presence"
+         },
+          {
+          "elementName":"findFlight",
+          "identifier":"id",
+          "value":"search",
+          "waitFor":"presence"
+          }
+]
+}
