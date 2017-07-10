@@ -2,20 +2,17 @@ package steps;
 
 import com.testvagrant.commons.exceptions.OptimusException;
 import com.testvagrant.stepdefs.exceptions.NoSuchEventException;
-import com.testvagrant.stepdefs.steps.BaseSteps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import org.openqa.selenium.By;
 
 import java.io.IOException;
-import java.util.List;
 
 import static com.testvagrant.stepdefs.core.Tapster.tapster;
 
 public class GenericSteps extends BaseSteps {
     @Given("^(\\w+)\\s+on\\s+(\\w+)\\s+screen\\s+(\\w+)\\s+on\\s+(\\w+)\\s+value\\s+(.*)$")
     public void consumerOnScreenPerformsActionOnElementWithValue(String consumer, String screen, String action, String element, String value) throws NoSuchEventException, OptimusException, IOException, InterruptedException {
-       Thread.sleep(4000);
+       Thread.sleep(3000);
         tapster().useDriver(getDriverInstanceFor(consumer))
                 .asConsumer(consumer)
                 .onScreen(screen)

@@ -1,0 +1,22 @@
+{
+    "elements":[
+        {
+            "elementName":"userName",
+            "identifier":"xpath",
+            "value":"//android.widget.EditText[@text='SkyMiles® Number or Username']",
+            "waitFor":"visibility"
+        },
+        {
+             "elementName":"password",
+             "identifier":"xpath",
+             "value":"//android.widget.LinearLayout[2]//android.widget.EditText[1]",
+              "waitFor":"visibility"
+        },
+        {
+              "elementName":"loginBtn",
+              "identifier":"id",
+              "value":"com.delta.mobile.android:id/continue_btn",
+              "waitFor":"visibility"
+        }
+    ]
+}

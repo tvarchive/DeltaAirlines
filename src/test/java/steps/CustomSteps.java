@@ -1,10 +1,6 @@
 package steps;
 
-import com.testvagrant.stepdefs.steps.BaseSteps;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.FlightPage;
 
 import java.util.List;
@@ -43,4 +39,8 @@ public class CustomSteps extends BaseSteps {
     public void userOnSeatsScreenChoosesSeat(int seat) throws Throwable {
         new FlightPage(getDriverInstanceFor("user")).chooseSeat(2);
     }
+//    @And("^user on seats screen chooses (\\d+) (\\w+) from (\\w+)$")
+//    public void userOnSeatsScreenChoosesSeat(int noOfSeats, String seat, List seats) throws Throwable {
+//        new FlightPage(getDriverInstanceFor("user")).chooseSeat(2,seat,seats);
+//    }
 }

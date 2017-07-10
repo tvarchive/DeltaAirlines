@@ -1,6 +1,5 @@
 package steps;
 
-import com.testvagrant.stepdefs.steps.BaseSteps;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -18,11 +17,9 @@ public class HelloOptimusSteps extends BaseSteps {
 
     @When("^I open it on either emulator, simulator or device on any platform$")
     public void iOpenItOnEitherEmulatorSimulatorOrDeviceOnAnyPlatform() throws Throwable {
-
     }
 
     @Then("^I should be able to say a hello to optimus$")
     public void iShouldBeAbleToSayAHelloToOptimus() throws Throwable {
-
     }
 }

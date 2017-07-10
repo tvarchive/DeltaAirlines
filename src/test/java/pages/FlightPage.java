@@ -73,4 +73,25 @@ public class FlightPage extends BasePage {
             }
         }
     }
+
+    /*public void chooseSeat(int noOfSeats, String popup, List seats) {
+        waitForElementToBeClickable(seatKey);
+        int i = 30;
+        popupMessage = By.id(popup);
+        seatsList = seats;
+        for (int j = 0; j < noOfSeats; j++) {
+            waitForElementToBeClickable(seatKey);
+            int size = seats.size();
+            inner:
+            for (; i < size; i++) {
+                seatsList.get(i).click();
+                if (isElementPresent(noThanks)) {
+                    driver.findElement(noThanks).click();
+                }
+                if (isElementPresent(popupMessage)) {
+                    break inner;
+                }
+            }
+        }
+    }*/
 }
