@@ -3,6 +3,7 @@ package steps;
 import com.testvagrant.stepdefs.steps.BaseSteps;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pages.FlightPage;
 
@@ -36,5 +37,10 @@ public class CustomSteps extends BaseSteps {
     @And("^user on info screen scroll till 2016")
     public void userOnInfoScreenScrollTill() throws Throwable {
         new FlightPage(getDriverInstanceFor("user")).scroll();
+    }
+
+    @And("^user on seats screen chooses (\\d+) seat$")
+    public void userOnSeatsScreenChoosesSeat(int seat) throws Throwable {
+        new FlightPage(getDriverInstanceFor("user")).chooseSeat(2);
     }
 }

@@ -17,6 +17,24 @@
  "identifier":"xpath",
  "value":"com.delta.mobile.android:id/continue_as_guest_login",
  "waitFor":"presence"
- }
+ },
+   {
+   "elementName":"openSideMenu",
+   "identifier":"id",
+   "value":"android:id/up",
+   "waitFor":"visibility"
+   },
+     {
+     "elementName":"book",
+     "identifier":"xpath",
+     "value":"//android.widget.TextView[@text='Book']",
+     "waitFor":"visibility"
+     },
+           {
+           "elementName":"selectSeat",
+           "identifier":"id",
+           "value":"ism_link",
+           "waitFor":"visibility"
+           }
 ]
 }

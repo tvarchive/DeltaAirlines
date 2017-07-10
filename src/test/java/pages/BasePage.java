@@ -44,16 +44,6 @@ public class BasePage {
         by.get(index).click();
     }
 
-    public void chooseSeat(List<By> by, By popup) {
-        List list = new ArrayList();
-        list.addAll(by);
-        for (int i = 0; i < list.size(); i++) {
-            driver.findElement(by.get(i)).click();
-            if (driver.findElement(popup).isDisplayed()) {
-                return;
-            }
-        }
-    }
 
     public void waitForElementToBeVisible(By by) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));

@@ -16,7 +16,7 @@ public class FlightPage extends BasePage {
     public FlightPage(AppiumDriver driver) {
         super(driver);
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(id = "com.delta.mobile.android:id/predictive_city_text")
@@ -31,22 +31,46 @@ public class FlightPage extends BasePage {
     @FindBy(id = "com.delta.mobile.android:id/compare_experiences_link")
     private WebElement compare;
 
-    public void selectPlaceFromList(){
-        selectByindex(placeList,1);
+    public void selectPlaceFromList() {
+        selectByindex(placeList, 1);
     }
 
-    public void selectDate(){
-        selectByindex(dateList,36);
+    public void selectDate() {
+        selectByindex(dateList, 36);
     }
 
-    public void selectFlight(){
+    public void selectFlight() {
         waitForElementToBeClickable(compare);
-        selectByindex(selectFlight,0);
+        selectByindex(selectFlight, 0);
     }
 
-    public void scroll(){
-        driver.swipe(520,990,520,750,1000);
+    public void scroll() {
+        driver.swipe(520, 990, 520, 750, 1000);
     }
 
+    @FindBy(className = "android.widget.ImageView")
+    private List<WebElement> seats;
 
+    private By noThanks = By.id("com.delta.mobile.android:id/seatmap_no_thanks_button");
+    private By popup = By.id("com.delta.mobile.android:id/popup_content");
+    private By seatKey = By.id("com.delta.mobile.android:id/seat_key_button");
+
+    public void chooseSeat(int noOfSeats) {
+        waitForElementToBeClickable(seatKey);
+        int i = 30;
+        for (int j = 0; j < noOfSeats; j++) {
+            waitForElementToBeClickable(seatKey);
+            int size = seats.size();
+            inner:
+            for (; i < size; i++) {
+                seats.get(i).click();
+                if (isElementPresent(noThanks)) {
+                    driver.findElement(noThanks).click();
+                }
+                if (isElementPresent(popup)) {
+                    break inner;
+                }
+            }
+        }
+    }
 }

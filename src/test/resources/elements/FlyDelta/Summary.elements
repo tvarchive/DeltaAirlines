@@ -4,7 +4,7 @@
 "elementName":"reviewInfo",
 "identifier":"xpath",
 "value":"//android.widget.Button[@content-desc='Review Passenger Info']",
-"waitFor":"visibility"
+"waitFor":"presence"
 }
 ]
 }

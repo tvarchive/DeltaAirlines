@@ -15,7 +15,7 @@ import static com.testvagrant.stepdefs.core.Tapster.tapster;
 public class GenericSteps extends BaseSteps {
     @Given("^(\\w+)\\s+on\\s+(\\w+)\\s+screen\\s+(\\w+)\\s+on\\s+(\\w+)\\s+value\\s+(.*)$")
     public void consumerOnScreenPerformsActionOnElementWithValue(String consumer, String screen, String action, String element, String value) throws NoSuchEventException, OptimusException, IOException, InterruptedException {
-       Thread.sleep(3000);
+       Thread.sleep(4000);
         tapster().useDriver(getDriverInstanceFor(consumer))
                 .asConsumer(consumer)
                 .onScreen(screen)
