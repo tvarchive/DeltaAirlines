@@ -30,7 +30,8 @@
             "identifier":"xpath",
             "value":"//android.view.View[@content-desc='Month']",
             "waitFor":"visibility"
-        },{
+        },
+        {
             "elementName":"jan",
             "identifier":"xpath",
             "value":"//android.view.View[@content-desc='January']//android.view.View[@content-desc='January']",
@@ -47,43 +48,51 @@
         "identifier":"xpath",
         "value":"//android.view.View[@content-desc='1']",
         "waitFor":"visibility"
-        },{
+        },
+        {
         "elementName":"year",
         "identifier":"xpath",
         "value":"//android.view.View[@content-desc='Year']",
         "waitFor":"visibility"
-        },{
+        },
+        {
         "elementName":"2016",
         "identifier":"xpath",
         "value":"//android.view.View[@content-desc='2016']",
         "waitFor":"visibility"
-        },{
+        },
+        {
         "elementName":"phone",
         "identifier":"xpath",
         "value":"//android.widget.EditText[@text='Area/City code and phone number']",
         "waitFor":"visibility"
-        },{
+        },
+        {
         "elementName":"email",
         "identifier":"xpath",
         "value":"//android.widget.EditText[@text='Email address']",
         "waitFor":"visibility"
-        },{
+        },
+        {
         "elementName":"remail",
         "identifier":"xpath",
         "value":"//android.widget.EditText[@text='Re-enter email address']",
         "waitFor":"visibility"
-        },{
+        },
+        {
         "elementName":"selectSeat",
         "identifier":"xpath",
         "value":"//android.view.View[@content-desc='SELECT']",
         "waitFor":"visibility"
-        },{
+        },
+        {
         "elementName":"bookFlight",
         "identifier":"xpath",
         "value":"//android.widget.Button[@content-desc='Select Seats & Trip Extras']",
         "waitFor":"visibility"
         }
-        ,{
+        ,
+        {
         "elementName":"nextPassenger",
         "identifier":"xpath",
         "value":"//android.widget.Button[@content-desc='Next Passenger']",
