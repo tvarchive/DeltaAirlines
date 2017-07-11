@@ -1,0 +1,10 @@
+{
+    "elements":[
+        {
+            "elementName":"doneButton",
+            "identifier":"id",
+            "value":"com.delta.mobile.android:id/done_btn",
+            "waitFor":"visibility"
+        }
+    ]
+}

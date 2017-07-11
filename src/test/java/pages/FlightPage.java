@@ -55,12 +55,10 @@ public class FlightPage extends BasePage {
     private By popup = By.id("com.delta.mobile.android:id/popup_content");
     private By seatKey = By.id("com.delta.mobile.android:id/seat_key_button");
 
-    public void chooseSeat(int noOfSeats) {
+    public void chooseSeat() {
         waitForElementToBeClickable(seatKey);
         int size = seats.size();
         int i = 30;
-        for (int j = 0; j < noOfSeats-1; j++) {
-            waitForElementToBeClickable(seatKey);
             inner:
             for (; i < size; i++) {
                 seats.get(i).click();
@@ -72,7 +70,6 @@ public class FlightPage extends BasePage {
                     break inner;
                 }
             }
-        }
     }
 
     @FindBy(xpath = "//android.widget.Button[@content-desc='Find Flights']")

@@ -46,7 +46,9 @@ Feature: Seat Booking module
     And user on info screen scrolldown on year
     And user on info screen taps on year
     And user on info screen taps on 2016
+
     And user on info screen scrolldown on bookFlight value Select Seats & Trip Extras
     And user on info screen taps on bookFlight
     And user on info screen taps on selectSeat
-    Then user on seats screen chooses 2 seat
+    And user on seats screen chooses 3 seat
+    Then user on seat screen taps on doneButton

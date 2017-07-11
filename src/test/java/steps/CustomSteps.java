@@ -37,7 +37,7 @@ public class CustomSteps extends BaseSteps {
 
     @And("^user on seats screen chooses (\\d+) seat$")
     public void userOnSeatsScreenChoosesSeat(int seat) throws Throwable {
-        new FlightPage(getDriverInstanceFor("user")).chooseSeat(2);
+        new FlightPage(getDriverInstanceFor("user")).chooseSeat();
     }
 
     @And("^user taps on findFlight$")
