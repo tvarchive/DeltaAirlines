@@ -57,10 +57,10 @@ public class FlightPage extends BasePage {
 
     public void chooseSeat(int noOfSeats) {
         waitForElementToBeClickable(seatKey);
+        int size = seats.size();
         int i = 30;
-        for (int j = 0; j < noOfSeats; j++) {
+        for (int j = 0; j < noOfSeats-1; j++) {
             waitForElementToBeClickable(seatKey);
-            int size = seats.size();
             inner:
             for (; i < size; i++) {
                 seats.get(i).click();
@@ -68,10 +68,26 @@ public class FlightPage extends BasePage {
                     driver.findElement(noThanks).click();
                 }
                 if (isElementPresent(popup)) {
+                    System.out.println("=====Booked");
                     break inner;
                 }
             }
         }
+    }
+
+    @FindBy(xpath = "//android.widget.Button[@content-desc='Find Flights']")
+    private WebElement button;
+
+    By button1 = By.xpath("//android.widget.Button[@content-desc='Find Flights']");
+
+    public void searchFlight() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        waitForElementToBeClickable(button1);
+        driver.findElement(button1).click();
     }
 
     /*public void chooseSeat(int noOfSeats, String popup, List seats) {

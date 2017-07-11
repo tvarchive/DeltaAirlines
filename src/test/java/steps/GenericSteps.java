@@ -2,17 +2,18 @@ package steps;
 
 import com.testvagrant.commons.exceptions.OptimusException;
 import com.testvagrant.stepdefs.exceptions.NoSuchEventException;
+import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 
 import java.io.IOException;
 
+import static com.testvagrant.intents.Intent.intentRunner;
 import static com.testvagrant.stepdefs.core.Tapster.tapster;
 
 public class GenericSteps extends BaseSteps {
     @Given("^(\\w+)\\s+on\\s+(\\w+)\\s+screen\\s+(\\w+)\\s+on\\s+(\\w+)\\s+value\\s+(.*)$")
     public void consumerOnScreenPerformsActionOnElementWithValue(String consumer, String screen, String action, String element, String value) throws NoSuchEventException, OptimusException, IOException, InterruptedException {
-       Thread.sleep(3000);
         tapster().useDriver(getDriverInstanceFor(consumer))
                 .asConsumer(consumer)
                 .onScreen(screen)
@@ -51,5 +52,15 @@ public class GenericSteps extends BaseSteps {
                 .doAction(action)
                 .withValue(value)
                 .serve();
+    }
+
+    @Given("^(Intent):(.*)$")
+    public void intent(String action, String intentId) throws Throwable {
+        intentRunner(intentId).run();
+    }
+
+    @Given("^(DataIntent):(.*)$")
+    public void intentWithDataTable(String action, String intentId, DataTable dataTables) throws Throwable {
+        intentRunner(intentId).useDatatable(dataTables).run();
     }
 }

@@ -97,6 +97,12 @@
         "identifier":"xpath",
         "value":"//android.widget.Button[@content-desc='Next Passenger']",
         "waitFor":"visibility"
+        },
+        {
+            "elementName":"addPassengerInfo",
+            "identifier":"xpath",
+            "value":"//android.view.View[@content-desc='Add Passenger Info']",
+            "waitFor":"visibility"
         }
     ]
 }

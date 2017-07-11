@@ -42,9 +42,9 @@
 },
 {
 "elementName":"findFlight",
-"identifier":"xpath",
+"identifier":"className",
 "value":"//android.widget.Button[@content-desc='Find Flights']",
-"waitFor":"visibility"
+"waitFor":"presence"
 },
 {
 "elementName":"passengers",
@@ -64,6 +64,18 @@
 "identifier":"id",
 "value":"com.delta.mobile.android:id/fare_value",
 "waitFor":"visibility"
-}
+},
+    {
+        "elementName":"TripSummary",
+        "identifier":"xpath",
+        "value":"//android.view.View[@content-desc='Trip Summary']",
+        "waitFor":"presence"
+    },
+     {
+     "elementName":"more",
+     "identifier":"xpath",
+     "value":"//android.view.View[@content-desc='MORE SEARCH OPTIONS']",
+     "waitFor":"visibility"
+     }
 ]
 }

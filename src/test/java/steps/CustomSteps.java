@@ -1,9 +1,9 @@
 package steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import pages.FlightPage;
-
-import java.util.List;
+import pages.TripSummaryPage;
 
 
 public class CustomSteps extends BaseSteps {
@@ -38,6 +38,16 @@ public class CustomSteps extends BaseSteps {
     @And("^user on seats screen chooses (\\d+) seat$")
     public void userOnSeatsScreenChoosesSeat(int seat) throws Throwable {
         new FlightPage(getDriverInstanceFor("user")).chooseSeat(2);
+    }
+
+    @And("^user taps on findFlight$")
+    public void userTapsOnFindFlight() throws Throwable {
+        new FlightPage(getDriverInstanceFor("user")).searchFlight();
+    }
+
+    @And("^user waits for tripsummary to be visible$")
+    public void userWaitsForTripsummaryToBeVisible() throws Throwable {
+        new TripSummaryPage(getDriverInstanceFor("user")).waitForTripSummaryToBeVisible();
     }
 //    @And("^user on seats screen chooses (\\d+) (\\w+) from (\\w+)$")
 //    public void userOnSeatsScreenChoosesSeat(int noOfSeats, String seat, List seats) throws Throwable {

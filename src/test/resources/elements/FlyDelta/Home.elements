@@ -1,7 +1,7 @@
 {
 "elements":[
 {
-"elementName":"tickMark",
+"elementName":"flyDeltaIntro",
 "identifier":"id",
 "value":"com.delta.mobile.android:id/action_done",
 "waitFor":"presence"
