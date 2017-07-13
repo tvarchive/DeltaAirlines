@@ -3,11 +3,8 @@ Feature: Test the seat booking module
 
   @test
   Scenario: Seat booking
-    Given user on home screen verifies flyDeltaIntro is visible
-    And Intent:Login
-    And user on home screen verifies openSideMenu is visible
-    And   Intent:Book
-    And user on bookFlight screen verifies oneWay is visible
+    Given Intent:Login
+    And Intent:Book
     When  Intent:Search One Way Flight
     And user on bookFlight screen taps on 1stFlight
     And user on bookFlight screen verifies TripSummary is Visible
@@ -16,7 +13,7 @@ Feature: Test the seat booking module
     And user on info screen verifies addPassengerInfo is visible
     And user on info screen scrolldown on nextPassenger value Next Passenger
     And user on info screen taps on nextPassenger
-    And user on info screen verifies addPassengerInfo is visible
     And Intent:Fill User Information for other passengers
     And user on info screen taps on selectSeat
-    Then user on seats screen chooses 2 seat
+    And user on seats screen chooses 2 seat
+    Then user on seat screen taps on doneButton

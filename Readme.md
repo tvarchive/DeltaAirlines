@@ -34,7 +34,7 @@ To create a new Optimus project.
 ```
 $ optimus new <project_name>
 ```
-Once the project is created you can import the project into your favourite IDE. However we love [IntelliJ](https://github.com/testvagrant/optimusTemplate/wiki/Import-Optimus-Project---Intellij) though. 
+Once the project is created you can import the project into your favourite IDE. However we love [IntelliJ](https://github.com/testvagrant/optimusTemplate/wiki/Import-Optimus-Project---Intellij) though.
 
 ### Import Project
 * [IntelliJ](https://github.com/testvagrant/optimusTemplate/wiki/Import-Optimus-project-using-Intellij)
@@ -52,7 +52,7 @@ Your new OptimusTemplate project gets created with a sample test for an example 
 Note: You will see that HelloOptimus app is launched on all the connected Android Devices and emulators.
 #### Step 4: Check for IOS by running
     gradle clean build runFragmentation -DtestFeed=HelloOptimusIOS -Dtags=@helloOptimus
-Note: You will see that HelloOptimus app is launched on a IPhone6 Simulator. 
+Note: You will see that HelloOptimus app is launched on a IPhone6 Simulator.
 
 ### First test
 You can learn more about the test which ran on your devices by following our [Android Tutorial](https://github.com/testvagrant/optimusTemplate/wiki/My-First-Android-Test) or [IOS Tutorial](https://github.com/testvagrant/optimusTemplate/wiki/My-First-IOS-Test)

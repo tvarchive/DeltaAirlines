@@ -1,6 +1,7 @@
 package steps;
 
 import com.testvagrant.commons.entities.SmartBOT;
+import com.testvagrant.intents.Intent;
 import com.testvagrant.optimus.device.OptimusController;
 import io.appium.java_client.AppiumDriver;
 import utils.OptimusImpl;
@@ -13,6 +14,7 @@ public class BaseSteps {
     protected static OptimusImpl optimus;
     protected static OptimusController controller;
     protected static List<SmartBOT> smartBOTs;
+    protected static Intent intent;
 
     protected AppiumDriver getDriverInstanceFor(String appConsumer) {
         return getSmartBOTBelongingTo(appConsumer).getDriver();

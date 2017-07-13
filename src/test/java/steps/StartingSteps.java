@@ -1,6 +1,7 @@
 package steps;
 
 import com.testvagrant.commons.utils.JsonUtil;
+import com.testvagrant.intents.Intent;
 import com.testvagrant.optimus.device.OptimusController;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -20,6 +21,7 @@ public class StartingSteps extends BaseSteps {
         controller = new OptimusController(appJson, scenario);
         smartBOTs = controller.registerSmartBOTs();
         optimus = new OptimusImpl(smartBOTs);
+        intent = new Intent();
     }
 
     @After

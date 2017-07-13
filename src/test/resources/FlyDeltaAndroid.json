@@ -17,12 +17,8 @@
         "androidOnlyCapabilities": {
           "appActivity": "com.delta.mobile.android.SplashScreen",
           "appPackage": "com.delta.mobile.android",
-          "avdLaunchTimeout": 300000,
           "useKeystore": false
         }
-      },
-      "deviceState": {
-        "captureVideo": true
       }
     }
   ]

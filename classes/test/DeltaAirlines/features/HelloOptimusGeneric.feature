@@ -113,8 +113,3 @@ Feature: Advice on how to plan and save tax
 #      And user on learn screen scrolls up and taps on articles
 
 #      this is causing an error.
-
-
-
-
-

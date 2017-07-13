@@ -8,7 +8,6 @@ import cucumber.api.java.en.Given;
 
 import java.io.IOException;
 
-import static com.testvagrant.intents.Intent.intentRunner;
 import static com.testvagrant.stepdefs.core.Tapster.tapster;
 
 public class GenericSteps extends BaseSteps {
@@ -56,11 +55,11 @@ public class GenericSteps extends BaseSteps {
 
     @Given("^(Intent):(.*)$")
     public void intent(String action, String intentId) throws Throwable {
-        intentRunner(intentId).run();
+        intent.run(intentId);
     }
 
     @Given("^(DataIntent):(.*)$")
     public void intentWithDataTable(String action, String intentId, DataTable dataTables) throws Throwable {
-        intentRunner(intentId).useDatatable(dataTables).run();
+        intent.useDatatable(dataTables).run(intentId);
     }
 }
